@@ -1,0 +1,568 @@
+/* Elegant & Luxurious Footer Styles - Inspired by Palmonas.com */
+
+:root {
+  --purple-primary: #9F3ED5;
+  --purple-light: #E0D1FF;
+  --purple-ultralight: #F8F4FF;
+  --pink-primary: #FF6EBC;
+  --pink-light: #FFCCE0;
+  --pink-ultralight: #FFF8FB;
+  --gold-accent: #D4AF37;
+  --gold-light: #F4E8A8;
+  --gold-ultralight: #FDF8E3;
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-400: #BDBDBD;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #424242;
+  --gray-800: #212121;
+  --gray-900: #111111;
+  --white: #FFFFFF;
+  --shadow-elegant: 0 -2px 16px rgba(0, 0, 0, 0.05);
+  --shadow-luxury: 0 -4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.modern-footer {
+  background: linear-gradient(135deg, 
+    var(--gray-50) 0%, 
+    var(--white) 100%
+  );
+  color: var(--gray-700);
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(0, 0, 0, 0.1), 
+    transparent
+  );
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Newsletter Section - Clean Design */
+.newsletter-section {
+  background: linear-gradient(135deg, 
+    var(--purple-primary) 0%, 
+    var(--pink-primary) 100%
+  );
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-luxury);
+}
+
+.newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 60%
+  );
+}
+
+.newsletter-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-content h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.01em;
+}
+
+.newsletter-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+  background: white;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.newsletter-input::placeholder {
+  color: var(--gray-500);
+  font-weight: 400;
+}
+
+.newsletter-button {
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--purple-primary);
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.newsletter-button:hover {
+  background: var(--gray-50);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Main Footer Content */
+.footer-main {
+  padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Brand Section - Clean Branding */
+.footer-brand {
+  padding-right: 2rem;
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 1.25rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.01em;
+}
+
+.brand-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  color: var(--gray-600);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.facebook:hover {
+  background: #1877f2;
+  color: white;
+  border-color: #1877f2;
+}
+
+.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  border-color: #e6683c;
+}
+
+.whatsapp:hover {
+  background: #25d366;
+  color: white;
+  border-color: #25d366;
+}
+
+.youtube:hover {
+  background: #ff0000;
+  color: white;
+  border-color: #ff0000;
+}
+
+/* Footer Links - Clean Typography */
+.footer-links h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--gray-600);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.footer-links a:hover {
+  color: var(--purple-primary);
+  transform: translateX(3px);
+}
+
+/* Footer Bottom - Clean Finish */
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.copyright {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.legal-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.legal-links a {
+  color: var(--gray-500);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.legal-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--purple-primary);
+  transition: width 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: var(--purple-primary);
+}
+
+.legal-links a:hover::after {
+  width: 100%;
+}
+
+/* Payment Methods - Clean Display */
+.payment-methods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.25rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.payment-methods span {
+  color: var(--gray-700);
+  font-weight: 500;
+  margin-right: 1.25rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.payment-icon {
+  padding: 0.6rem 1rem;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.payment-icon:hover {
+  background: var(--gray-50);
+  border-color: rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific payment method colors */
+.visa:hover { 
+  border-color: #1a1f71; 
+  color: #1a1f71;
+}
+
+.mastercard:hover { 
+  border-color: #eb001b; 
+  color: #eb001b;
+}
+
+.paypal:hover { 
+  border-color: #0070ba; 
+  color: #0070ba;
+}
+
+.gpay:hover { 
+  border-color: #4285f4; 
+  color: #4285f4;
+}
+
+.paytm:hover { 
+  border-color: #00baf2; 
+  color: #00baf2;
+}
+
+.upi:hover { 
+  border-color: #ff6600; 
+  color: #ff6600;
+}
+
+/* Responsive Design - Clean Mobile Experience */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  .footer-brand {
+    grid-column: span 2;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 1.5rem;
+  }
+  
+  .newsletter-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .newsletter-content h3 {
+    font-size: 1.75rem;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+  }
+  
+  .newsletter-input {
+    width: 100%;
+  }
+  
+  .footer-main {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-brand {
+    grid-column: span 1;
+    text-align: center;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .legal-links {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+  
+  .payment-methods {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .newsletter-content p {
+    font-size: 0.95rem;
+  }
+  
+  .brand-name {
+    font-size: 1.75rem;
+  }
+  
+  .social-links {
+    gap: 0.75rem;
+  }
+  
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .legal-links {
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-icons {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .payment-icon {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Clean scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+.newsletter-input:focus,
+.newsletter-button:focus,
+.social-link:focus,
+.footer-links a:focus,
+.legal-links a:focus {
+  outline: 2px solid var(--purple-primary);
+  outline-offset: 2px;
+}
+
+/* Animation for footer reveal */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modern-footer {
+  animation: fadeInUp 0.6s ease-out;
+}

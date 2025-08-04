@@ -1,0 +1,807 @@
+/* Modern Gold-themed styles for Authentication pages */
+
+:root {
+  --gold-primary: #D4AF37;
+  --gold-secondary: #C5A028;
+  --gold-light: #F5E7B0;
+  --gold-ultralight: #FDF8E3;
+  --gold-dark: #9E7C21;
+  --white: #FFFFFF;
+  --off-white: #F9F9F9;
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+  --red-50: #FEF2F2;
+  --red-100: #FEE2E2;
+  --red-600: #DC2626;
+  --green-50: #ECFDF5;
+  --green-100: #D1FAE5;
+  --green-600: #059669;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* General Styles */
+.min-h-screen {
+  min-height: 100vh;
+  background-color: var(--gray-50);
+  background-image: 
+    linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.08), transparent 400px),
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 400px);
+  background-attachment: fixed;
+}
+
+.max-w-md {
+  max-width: 28rem;
+  width: 100%;
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.rounded-lg {
+  border-radius: 1rem;
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+/* Typography */
+.text-center {
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.gold-text::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+  border-radius: 3px;
+}
+
+.text-gray-600 {
+  color: var(--gray-600);
+}
+
+.text-gray-700 {
+  color: var(--gray-700);
+}
+
+.text-red-600 {
+  color: var(--red-600);
+}
+
+.text-red-700 {
+  color: var(--red-600);
+}
+
+/* Form Elements */
+.block {
+  display: block;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-300 {
+  border-color: var(--gray-300);
+}
+
+.border-red-300 {
+  border-color: var(--red-100);
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.focus\:outline-none:focus {
+  outline: none;
+}
+
+.focus\:ring-2:focus {
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
+}
+
+.focus\:ring-\[\#D4AF37\]:focus {
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.4);
+}
+
+.focus\:border-transparent:focus {
+  border-color: transparent;
+}
+
+input, select, textarea {
+  transition: all 0.2s ease;
+  background-color: var(--white);
+}
+
+input::placeholder {
+  color: var(--gray-400);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+/* Buttons */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gold-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+  color: var(--white);
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+  min-height: 45px;
+}
+
+.gold-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
+  background: linear-gradient(135deg, var(--gold-secondary), var(--gold-primary));
+}
+
+.gold-button:active {
+  transform: translateY(0);
+}
+
+.gold-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.gold-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: all 0.6s ease;
+}
+
+.gold-button:hover::before {
+  left: 100%;
+}
+
+/* Google Button */
+.border-gray-300 {
+  border-color: var(--gray-300);
+}
+
+button[type="button"] {
+  cursor: pointer;
+}
+
+/* Error Messages */
+.bg-red-100 {
+  background-color: var(--red-50);
+}
+
+.border-red-400 {
+  border-color: var(--red-100);
+}
+
+/* Tab Navigation */
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-gray-200 {
+  border-color: var(--gray-200);
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-\[\#D4AF37\] {
+  border-color: var(--gold-primary);
+}
+
+/* Hover Effects */
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+.hover\:bg-gray-50:hover {
+  background-color: var(--gray-100);
+}
+
+/* Links */
+a {
+  transition: all 0.2s ease;
+}
+
+/* Divider */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  cursor: pointer;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.25rem;
+  appearance: none;
+  outline: none;
+  transition: all 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--gold-primary);
+  border-color: var(--gold-primary);
+}
+
+input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.max-w-md {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Google Sign in Button */
+button[type="button"] svg {
+  transition: transform 0.2s ease;
+}
+
+button[type="button"]:hover svg {
+  transform: scale(1.1);
+}
+
+/* OTP Section */
+.otp-digit {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .p-8 {
+    padding: 1.5rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .flex.items-center {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .flex.items-center.justify-between {
+    gap: 1rem;
+  }
+}
+
+
+.flex.border-b {
+  position: relative;
+  margin: 0 -0.5rem;
+  padding: 0 0.5rem;
+}
+
+.flex.border-b button {
+  position: relative;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: var(--gray-500);
+  overflow: hidden;
+}
+
+.flex.border-b button:focus {
+  outline: none;
+}
+
+.flex.border-b button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  border-radius: 2px;
+}
+
+.flex.border-b button.border-b-2 {
+  color: var(--gray-900);
+  font-weight: 500;
+}
+
+.flex.border-b button.border-b-2::after {
+  transform: scaleX(1);
+}
+
+.flex.border-b button:hover:not(.border-b-2) {
+  color: var(--gray-700);
+}
+
+.flex.border-b button:hover:not(.border-b-2)::after {
+  transform: scaleX(0.5);
+  opacity: 0.5;
+}
+
+/* Google Sign-in Button Enhancement */
+button[type="button"].bg-white {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-300);
+  box-shadow: var(--shadow-sm);
+  font-weight: 500;
+}
+
+button[type="button"].bg-white:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+button[type="button"].bg-white:active {
+  transform: translateY(0);
+}
+
+button[type="button"].bg-white svg {
+  transition: transform 0.3s ease;
+}
+
+button[type="button"].bg-white:hover svg {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* OTP Verification Styles */
+.text-sm.text-gray-600.mb-4 {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--gold-ultralight);
+  border-left: 3px solid var(--gold-primary);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input#otp {
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+/* "Didn't receive OTP" button enhancement */
+button.text-sm.gold-text {
+  position: relative;
+  display: inline-block;
+}
+
+button.text-sm.gold-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+  transition: width 0.3s ease;
+}
+
+button.text-sm.gold-text:hover::after {
+  width: 100%;
+}
+
+/* Remember me checkbox enhancement */
+.flex.items-center:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+}
+
+.ml-2.block.text-sm.text-gray-700 {
+  margin-left: 0.5rem;
+  user-select: none;
+}
+
+input[type="checkbox"]#remember-me {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.25rem;
+  appearance: none;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+input[type="checkbox"]#remember-me:checked {
+  background-color: var(--gold-primary);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+input[type="checkbox"]#remember-me:checked::before {
+  content: '';
+  position: absolute;
+  top: 0.15rem;
+  left: 0.35rem;
+  width: 0.3rem;
+  height: 0.5rem;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+input[type="checkbox"]#remember-me:hover:not(:checked) {
+  border-color: var(--gold-secondary);
+}
+
+/* Forgot password link enhancement */
+a.font-medium.gold-text {
+  position: relative;
+  text-decoration: none;
+}
+
+a.font-medium.gold-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+  transition: width 0.3s ease;
+}
+
+a.font-medium.gold-text:hover::after {
+  width: 100%;
+}
+
+/* Error message enhancement */
+.bg-red-100.border.border-red-400 {
+  position: relative;
+  padding-left: 2.5rem;
+  animation: shakeError 0.4s ease-in-out;
+}
+
+.bg-red-100.border.border-red-400::before {
+  content: '!';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--red-600);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+@keyframes shakeError {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+/* Card hover effect */
+.max-w-md.w-full.space-y-8.bg-white {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.max-w-md.w-full.space-y-8.bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl), 0 10px 40px rgba(212, 175, 55, 0.15);
+}
+
+/* Login title enhancement */
+.text-3xl.font-extrabold.gold-text {
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.15);
+}
+
+/* Input field focus animation */
+input:focus {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70% { box-shadow: 0 0 0 5px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* Tab Content Animation */
+form.mt-8.space-y-6, 
+div.mt-8.space-y-6 {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Sign in with Google section */
+.bg-white.p-4.text-center {
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--white), var(--gray-50));
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.bg-white.p-4.text-center:hover {
+  background: linear-gradient(135deg, var(--gray-50), var(--white));
+}
+
+/* Google button specific enhancements */
+button.w-full.py-3.px-4.border.border-gray-300 {
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  z-index: 1;
+}
+
+button.w-full.py-3.px-4.border.border-gray-300::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(244, 244, 244, 0) 0%, 
+    rgba(244, 244, 244, 0.5) 50%, 
+    rgba(244, 244, 244, 0) 100%
+  );
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+button.w-full.py-3.px-4.border.border-gray-300:hover::before {
+  left: 100%;
+}
+
+button.w-full.py-3.px-4.border.border-gray-300:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Footer "Don't have an account" */
+.text-center.mt-4 {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.text-center.mt-4 .text-sm {
+  color: var(--gray-600);
+}
+
+.text-center.mt-4 .gold-text {
+  position: relative;
+  margin-left: 0.25rem;
+}
+
+.text-center.mt-4 .gold-text::after {
+  display: none;
+}
+
+.text-center.mt-4 .gold-text::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+  transition: width 0.3s ease;
+}
+
+.text-center.mt-4 .gold-text:hover::before {
+  width: 100%;
+}
+
+/* Add subtle pattern background to form container */
+.min-h-screen {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0) 100%),
+    radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.08), transparent 400px),
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 400px);
+  background-attachment: fixed;
+}

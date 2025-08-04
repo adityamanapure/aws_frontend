@@ -1,0 +1,924 @@
+/* Custom overrides to ensure circles and floating buttons */
+
+/* Force categories to be circles */
+.category-card {
+  border-radius: 50% !important;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 3px solid white;
+}
+
+.category-image {
+  border-radius: 50% !important;
+}
+
+/* Ensure floating actions are visible */
+.floating-actions {
+  display: flex !important;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  gap: 15px;
+}
+
+/* Style the WhatsApp button */
+.whatsapp-btn {
+  background-color: #25D366 !important;
+  color: white !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the Reels button */
+.reels-btn {
+  background: linear-gradient(45deg, #FF416C, #FF4B2B) !important;
+  color: white !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fix for category section removing left padding */
+
+/* Remove ALL padding from category section */
+
+/* Remove container padding */
+.category-carousel-container {
+  padding: 0 !important;
+}
+
+/* Fix category slide spacing */
+.category-slide {
+  padding: 0 !important;
+  margin: 0 !important;
+  justify-content: space-evenly !important;
+  gap: 0 !important;
+}
+
+/* Adjust individual category items */
+.category-item-wrapper {
+  padding: 0 !important;
+  margin: 10px 0 !important;
+}
+
+/* Improve category slide alignment */
+.category-slide {
+  justify-content: space-around !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 20px !important;
+}
+
+/* Fix container padding */
+.category-carousel-container {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* Ensure first category doesn't have extra left padding */
+.category-slide .category-item-wrapper:first-child {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Better centering of categories */
+.category-item-wrapper {
+  padding: 0 !important;
+  margin: 0 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Make sure cards are perfectly circular */
+.category-card {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+  border: 3px solid white !important;
+  max-width: 180px !important;
+  width: 100% !important;
+  aspect-ratio: 1/1 !important;
+  margin: 0 auto !important;
+}
+
+.category-image {
+  border-radius: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Ensure category carousel arrows position correctly */
+.category-carousel-prev, 
+.category-carousel-next {
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Set navigation arrows farther out to give more space */
+.category-carousel-prev {
+  left: -5px !important;
+}
+
+.category-carousel-next {
+  right: -5px !important;
+}
+
+/* Adjust navigation buttons position to accommodate no padding */
+.category-carousel-prev {
+  left: 10px !important;
+}
+
+.category-carousel-next {
+  right: 10px !important;
+}
+
+/* Make sure all categories are equally spaced */
+@media (min-width: 992px) {
+  .category-item-wrapper {
+    flex: 0 0 calc(33.333% - 20px) !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .category-item-wrapper {
+    flex: 0 0 calc(33.333% - 14px) !important;
+  }
+  
+  .category-card {
+    max-width: 150px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-carousel-container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .category-item-wrapper {
+    flex: 0 0 calc(50% - 10px) !important;
+  }
+  
+  .category-card {
+    max-width: 130px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-carousel-container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .category-slide {
+    gap: 10px !important;
+  }
+}
+
+/* Fix container outer padding */
+.category-showcase .container {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/* Adjust arrow positions for better visibility with no padding */
+.category-carousel-prev,
+.category-carousel-next {
+  z-index: 10 !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Make sure category track fills width */
+.category-carousel-track {
+  width: 100% !important;
+}
+
+/* Mobile & Responsive Optimization */
+
+/* General responsive improvements */
+@media (max-width: 767px) {
+  /* Better container spacing */
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  /* More compact section spacing */
+  .category-showcase,
+  .featured-products,
+  .story-section,
+  .features-section,
+  .instagram-section,
+  .newsletter-section {
+    padding: 2.5rem 0 !important;
+  }
+  
+  /* Improved section titles */
+  .section-title {
+    font-size: 26px !important;
+    margin-bottom: 1.8rem !important;
+  }
+  
+  /* Make hero content more readable */
+  .hero-content {
+    width: 92% !important;
+    padding: 1rem !important;
+  }
+  
+  .hero-title {
+    font-size: 28px !important;
+    margin-bottom: 0.7rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px !important;
+    margin-bottom: 1.2rem !important;
+  }
+  
+  .hero-button {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px !important;
+  }
+}
+
+/* Category Showcase Mobile Optimization */
+@media (max-width: 767px) {
+  /* Better category circle layout */
+  .category-carousel-container {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  
+  .category-slide {
+    justify-content: space-around !important;
+    gap: 10px !important;
+    padding: 0 5px !important;
+  }
+  
+  .category-item-wrapper {
+    padding: 5px !important;
+  }
+  
+  .category-card {
+    max-width: 130px !important;
+    border-width: 2px !important;
+  }
+  
+  /* Improve category navigation on mobile */
+  .category-carousel-prev,
+  .category-carousel-next {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 1.2rem !important;
+    top: 40% !important;
+  }
+  
+  .category-carousel-prev {
+    left: -5px !important;
+  }
+  
+  .category-carousel-next {
+    right: -5px !important;
+  }
+  
+  /* Better category name display */
+  .category-name-below {
+    font-size: 0.9rem !important;
+    margin-top: 0.8rem !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 130px !important;
+  }
+}
+
+/* Product Grid Mobile Optimization */
+@media (max-width: 767px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+  
+  .home-product-card .product-image-wrapper {
+    height: 200px !important;
+  }
+  
+  .home-product-card .product-info {
+    padding: 0.8rem 0 !important;
+  }
+  
+  .home-product-card .product-title {
+    font-size: 14px !important;
+    margin-bottom: 0.5rem !important;
+    height: 40px !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+  }
+  
+  .home-product-card .product-price {
+    font-size: 14px !important;
+  }
+  
+  .view-all-button {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    margin-top: 1.5rem !important;
+  }
+}
+
+/* Story Section Mobile Optimization */
+@media (max-width: 767px) {
+  .story-content {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .story-image {
+    order: -1 !important;
+    max-height: 250px !important;
+    overflow: hidden !important;
+  }
+  
+  .story-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  .story-title {
+    font-size: 26px !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .story-text p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Features Section Mobile Optimization */
+@media (max-width: 767px) {
+  .features-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .feature-item {
+    padding: 1rem !important;
+  }
+  
+  .feature-icon {
+    width: 45px !important;
+    height: 45px !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .feature-title {
+    font-size: 16px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .feature-description {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Instagram Grid Mobile Optimization */
+@media (max-width: 767px) {
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 5px !important;
+  }
+  
+  .instagram-subtitle {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Newsletter Mobile Optimization */
+@media (max-width: 767px) {
+  .newsletter-content {
+    padding: 0 1rem !important;
+  }
+  
+  .newsletter-title {
+    font-size: 22px !important;
+  }
+  
+  .newsletter-subtitle {
+    font-size: 15px !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .newsletter-form {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+  }
+  
+  .newsletter-input {
+    padding: 12px 15px !important;
+    width: 100% !important;
+    border-right: 1px solid #ddd !important;
+  }
+  
+  .newsletter-button {
+    width: 100% !important;
+  }
+}
+
+/* Trust Section Mobile Optimization */
+@media (max-width: 767px) {
+  .trust-badges {
+    flex-wrap: wrap !important;
+    gap: 1.5rem !important;
+  }
+  
+  .trust-badge {
+    flex: 0 0 45% !important;
+  }
+  
+  .trust-badge img {
+    width: 30px !important;
+    height: 30px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .payment-methods {
+    gap: 1rem !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .payment-methods img {
+    height: 25px !important;
+  }
+}
+
+/* Floating Actions Mobile Optimization */
+@media (max-width: 767px) {
+  .floating-actions {
+    bottom: 15px !important;
+    right: 15px !important;
+    gap: 12px !important;
+  }
+  
+  .floating-btn {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .floating-btn span {
+    font-size: 9px !important;
+    margin-top: 3px !important;
+  }
+}
+
+/* Mobile Hero Slider Fixes */
+
+/* Base hero slider improvements */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Shorter on mobile */
+  min-height: 400px;
+  max-height: 800px;
+}
+
+/* Improve hero content display */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 85%;
+  max-width: 800px;
+  z-index: 5;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  border-radius: 0;
+}
+
+/* Enhanced hero overlay for better text readability */
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+}
+
+/* Mobile-specific hero slider improvements */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 80vh;
+    min-height: 400px;
+  }
+  
+  .hero-content {
+    width: 90%;
+    padding: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+  }
+  
+  .hero-title {
+    font-size: 26px !important;
+    margin-bottom: 0.6rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 15px !important;
+    margin-bottom: 1.2rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .hero-button {
+    padding: 10px 18px !important;
+    font-size: 14px !important;
+  }
+  
+  .slider-dots {
+    bottom: 1rem !important;
+  }
+  
+  .slider-dot {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 4px !important;
+  }
+  
+  /* Ensure proper image display on mobile */
+  .hero-slide {
+    background-position: center !important;
+    background-size: cover !important;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .hero-slider {
+    height: 70vh;
+    min-height: 350px;
+  }
+  
+  .hero-content {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 22px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px !important;
+    margin-bottom: 1rem !important;
+    padding: 0 0.5rem !important;
+  }
+  
+  .hero-button {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+  }
+  
+  /* Improve slide dots on very small screens */
+  .slider-dots {
+    bottom: 0.8rem !important;
+  }
+  
+  .slider-dot {
+    width: 8px !important;
+    height: 8px !important;
+    margin: 0 3px !important;
+  }
+}
+
+/* Portrait orientation fixes */
+@media (max-width: 768px) and (orientation: portrait) {
+  .hero-slider {
+    height: 60vh;
+  }
+  
+  .hero-content {
+    top: 50%;
+  }
+}
+
+/* Landscape orientation fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-slider {
+    height: 90vh;
+  }
+  
+  .hero-content {
+    top: 50%;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .hero-title {
+    font-size: 22px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px !important;
+    margin-bottom: 0.8rem !important;
+  }
+}
+
+/* Handle notched phones with safe area */
+@supports (padding: max(0px)) {
+  .hero-content {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  
+  .hero-slider {
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Remove category arrows and section padding */
+
+/* Hide category navigation arrows */
+.category-carousel-prev,
+.category-carousel-next {
+  display: none !important;
+}
+
+/* Adjust category carousel without arrows */
+.category-carousel-container {
+  padding: 0 !important;
+  overflow: visible !important;
+  width: 100% !important;
+}
+
+/* Remove padding between sections */
+.category-showcase,
+.featured-products,
+.story-section,
+.features-section,
+.instagram-section,
+.newsletter-section,
+.trust-section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+/* Add margin to first section after hero to create spacing */
+.hero-slider + .category-showcase {
+  margin-top: 3rem !important;
+}
+
+/* Make sure section titles have proper spacing */
+.section-title {
+  margin-bottom: 2rem !important;
+  margin-top: 0 !important;
+}
+
+/* Fix category display without arrows */
+.category-slide {
+  justify-content: space-around !important;
+  width: 100% !important;
+  padding: 0 !important; 
+  margin: 0 !important;
+  gap: 0 !important;
+}
+
+/* Ensure category dots navigation remains visible if needed */
+.category-carousel-dots {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 1.5rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .category-showcase,
+  .featured-products,
+  .story-section,
+  .features-section,
+  .instagram-section,
+  .newsletter-section,
+  .trust-section {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .hero-slider + .category-showcase {
+    margin-top: 2rem !important;
+  }
+  
+  .section-title {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Fix view all buttons spacing */
+.view-all-container {
+  margin-top: 2rem !important;
+}
+
+/* Ensure category items stay centered without arrows */
+.category-item-wrapper {
+  margin: 0 !important;
+  padding: 0 10px !important;
+}
+
+/* Modern Hero Section Enhancements */
+
+/* Improved hero slider with modern styling */
+.hero-slider {
+  height: 80vh;
+  min-height: 500px;
+  max-height: 900px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced hero slide */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Modern gradient overlay instead of solid color */
+.hero-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+}
+
+/* Clean, modern hero content without background */
+.hero-content {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  transform: translateY(0);
+  text-align: left;
+  width: auto;
+  max-width: 600px;
+  z-index: 5;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+/* Modern typography for hero */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: white;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Modern CTA button */
+.hero-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: var(--hover);
+  transform: translateY(-3px);
+}
+
+/* Modern dots navigation */
+.slider-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 10%;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.slider-dot.active {
+  width: 30px;
+  border-radius: 10px;
+  background-color: var(--primary);
+}
+
+.slider-dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    left: 6%;
+    bottom: 12%;
+    max-width: 88%;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .slider-dots {
+    left: 6%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content {
+    left: 5%;
+    bottom: 15%;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-button {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+  
+  .slider-dots {
+    left: 5%;
+    bottom: 1.5rem;
+  }
+}
